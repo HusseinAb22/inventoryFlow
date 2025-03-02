@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="#80333333">
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search by name"
+        android:textColorHint="@color/white"
+        android:padding="8dp"
+        android:drawableStart="@android:drawable/ic_menu_search"/>
+
+    <!-- Category Filter -->
+    <Spinner
+        android:id="@+id/category_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:backgroundTint="#80333333"
+        android:padding="8dp"/>
+
+    <!-- RecyclerView for Stock Items -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_stock"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Pagination Controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_prev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Previous"
+            android:visibility="gone"
+            android:backgroundTint="@color/babyblue"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:visibility="gone"
+            android:backgroundTint="@color/babyblue"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</LinearLayout>

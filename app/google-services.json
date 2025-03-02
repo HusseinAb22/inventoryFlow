@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "122481022443",
+    "project_id": "inventoryflow-93b9c",
+    "storage_bucket": "inventoryflow-93b9c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:122481022443:android:fbffc924fb0b754735f5ae",
+        "android_client_info": {
+          "package_name": "com.Store.inventoryflow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDD_h3EFicOFIE-O5vuUOvP4rmbi6jPNjI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
