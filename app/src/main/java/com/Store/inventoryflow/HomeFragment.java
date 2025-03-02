@@ -21,7 +21,7 @@ public class HomeFragment extends Fragment {
     private ItemAdapter itemAdapter;
     private List<Item> itemList = new ArrayList<>();
 
-    private static final int STOCK_THRESHOLD = 5; // Change this to 10 if needed
+    private static final int STOCK_THRESHOLD = 5; 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -41,10 +41,12 @@ public class HomeFragment extends Fragment {
 
         loadLowStockItems();
     }
+
+    //refreshes the list of low stock items when the fragment is resumed
     @Override
     public void onResume() {
         super.onResume();
-        loadLowStockItems(); // Refresh low-stock items when fragment is visible
+        loadLowStockItems();
     }
 
 
