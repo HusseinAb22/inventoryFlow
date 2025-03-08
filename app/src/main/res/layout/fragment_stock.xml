@@ -21,8 +21,8 @@
         android:id="@+id/category_filter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:drawable/btn_dropdown"
-        android:backgroundTint="#80333333"
+        android:background="@drawable/spinner_background"
+        android:popupBackground="#CCFFFFFF"
         android:padding="8dp"/>
 
     <!-- RecyclerView for Stock Items -->

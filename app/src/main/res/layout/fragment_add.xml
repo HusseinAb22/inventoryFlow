@@ -54,9 +54,9 @@
         android:id="@+id/spinnerCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:drawable/btn_dropdown"
+        android:background="@drawable/spinner_background"
         android:padding="16dp"
-        android:backgroundTint="#80333333"/>
+        android:backgroundTint="#CCFFFFFF"/>
 
     <Button
         android:id="@+id/btn_add_item"

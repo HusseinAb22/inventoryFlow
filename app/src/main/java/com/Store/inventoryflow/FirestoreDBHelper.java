@@ -25,7 +25,7 @@ public class FirestoreDBHelper {
         this.db = FirebaseFirestore.getInstance();
     }
 
-    /** ✅ Add an Item to Firestore */
+    /**  Add an Item to Firestore */
     public void addItem(Item item, OnSuccessListener<Void> onSuccess, OnFailureListener onFailure) {
         db.collection(COLLECTION_NAME)
                 .document(item.getId())
@@ -35,7 +35,7 @@ public class FirestoreDBHelper {
     }
 
 
-    /** ✅ Retrieve an Item by Name (with Firestore Document ID) */
+    /**  Retrieve an Item by Name  */
     public void getItemByName(String itemName, OnSuccessListener<Item> onSuccess, OnFailureListener onFailure) {
         db.collection(COLLECTION_NAME)
                 .whereEqualTo("name", itemName.toLowerCase()) // Store a lowercase field in Firestore
@@ -61,7 +61,7 @@ public class FirestoreDBHelper {
 
 
 
-    /** ✅ Retrieve All Items */
+    /**  Retrieve All Items */
     public void getAllItems(OnSuccessListener<List<Item>> onSuccess, OnFailureListener onFailure) {
         db.collection(COLLECTION_NAME)
                 .get()
@@ -77,7 +77,7 @@ public class FirestoreDBHelper {
     }
 
 
-    /** ✅ Update Item Stock */
+    /**  Update Item Stock */
     public void updateItemStock(String itemId, int newStockCount, OnSuccessListener<Void> onSuccess, OnFailureListener onFailure) {
         db.collection(COLLECTION_NAME)
                 .document(itemId) // Now using correct Firestore ID
@@ -89,7 +89,7 @@ public class FirestoreDBHelper {
 
 
 
-    /** ✅ Delete an Item */
+    /**  Delete an Item */
     public void deleteItem(String itemId, OnSuccessListener<Void> onSuccess, OnFailureListener onFailure) {
         db.collection(COLLECTION_NAME)
                 .document(itemId)
@@ -97,7 +97,7 @@ public class FirestoreDBHelper {
                 .addOnSuccessListener(onSuccess)
                 .addOnFailureListener(onFailure);
     }
-    /** ✅ Update All Item Details */
+    /**  Update All Item Details */
     public void updateItemDetails(String itemId, String name, ItemCategory category, float price, int stockCount,
                                   OnSuccessListener<Void> onSuccess, OnFailureListener onFailure) {
         db.collection(COLLECTION_NAME)

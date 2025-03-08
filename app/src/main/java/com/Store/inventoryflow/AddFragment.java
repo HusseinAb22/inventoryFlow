@@ -101,10 +101,11 @@ public class AddFragment extends Fragment {
             Toast.makeText(this.getActivity(), "Please fill out all fields!", Toast.LENGTH_SHORT).show();
             return;
         }
-        if(!newItemName.matches("^[a-zA-Z]*$")){
+        if (!newItemName.matches("^[a-zA-Z]+(\\s[a-zA-Z]+)*$")) {
             Toast.makeText(this.getActivity(), "The name should contain only letters!", Toast.LENGTH_SHORT).show();
             return;
-        }if (newItemName.length()<3) {
+        }
+        if (newItemName.length()<3) {
             Toast.makeText(this.getActivity(), "The name should be at least 3 letters!", Toast.LENGTH_SHORT).show();
             return;
         }

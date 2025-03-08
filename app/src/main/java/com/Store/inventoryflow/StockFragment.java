@@ -105,12 +105,20 @@ public class StockFragment extends Fragment implements OnStockUpdatedListener {
         int start = currentPage * ITEMS_PER_PAGE;
         int end = Math.min(start + ITEMS_PER_PAGE, displayedItems.size());
 
+
+        if (start >= displayedItems.size()) {
+            currentPage = 0; // Reset to the first page if out of bounds
+            start = 0;
+            end = Math.min(ITEMS_PER_PAGE, displayedItems.size());
+        }
+
         List<Item> paginatedList = new ArrayList<>(displayedItems.subList(start, end));
         itemAdapter.updateList(paginatedList);
 
         btnPrev.setVisibility(currentPage > 0 ? View.VISIBLE : View.GONE);
         btnNext.setVisibility(end < displayedItems.size() ? View.VISIBLE : View.GONE);
     }
+
 
     private void setupSearch() {
         searchBar.addTextChangedListener(new TextWatcher() {
